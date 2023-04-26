@@ -1,0 +1,37 @@
+[
+  {
+    "id" : 0,
+    "name" : "John",
+    "lastName" : "Wick",
+    "email" : "jw@hotmail.com",
+    "password" : "password"
+  },
+  {
+    "id" : 1,
+    "name" : "Michael",
+    "lastName" : "Myers",
+    "email" : "mm@gmail.com",
+    "password" : "asd123"
+  },
+  {
+    "id" : 2,
+    "name" : "Scott",
+    "lastName" : "Atkins",
+    "email" : "sa@yahoo.com",
+    "password" : "sa123sa"
+  },
+  {
+    "id" : 3,
+    "name" : "Mary",
+    "lastName" : "Poppins",
+    "email" : "mp@icq2000.com",
+    "password" : "maryp123"
+  },
+  {
+    "id" : 4,
+    "name" : "Jason",
+    "lastName" : "Bourne",
+    "email" : "jb@gmail.com",
+    "password" : "jasonjasonjason"
+  }
+]
