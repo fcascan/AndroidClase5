@@ -16,12 +16,18 @@ interface UserDao {
     @Query("SELECT * FROM users WHERE id = :id")
     fun getUserById(id: Int): User?
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertUser(user: User?)
+    @Query("SELECT * FROM users WHERE email = :email AND password = :password")
+    fun getUserByEmailAndPassword(email: String, password: String): User
+
+    @Query("SELECT * FROM users WHERE email = :email")
+    fun getUserIdByEmail(email: String): Int
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insertUser(user: User?) : Long
 
     @Update
-    fun updateUser(user: User?)
+    fun updateUser(user: User?) : Int
 
     @Delete
-    fun deleteUser(user: User?)
+    fun deleteUser(user: User?) : Int
 }

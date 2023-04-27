@@ -2,9 +2,10 @@ package com.fcascan.clase5.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "users")
+@Entity(tableName = "users", indices = [Index(value = ["id", "email"], unique = true)])
 class User(id: Int, name: String, lastName: String, email: String, password: String){
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
@@ -23,7 +24,7 @@ class User(id: Int, name: String, lastName: String, email: String, password: Str
     var password: String = password
 
     init {
-        this.id = id
+//        this.id = id
         this.name = name
         this.lastName = lastName
         this.email = email

@@ -25,10 +25,8 @@ class StartingUsers(private val context: Context) : RoomDatabase.Callback() {
         }
     }
 
-
     private fun fillWithStartingUsers(context: Context) {
         val dao = AppDatabase.getInstance(context)?.userDao()
-
         try {
             val users = loadJSONFromAsset(context,  R.raw.users)
             for (i in 0 until users.length()) {
@@ -42,7 +40,7 @@ class StartingUsers(private val context: Context) : RoomDatabase.Callback() {
                 )
             }
         } catch (e: JSONException) {
-            Log.e("fillWithStartingUsers", e.toString())
+            Log.e("StartingUsers: fillWithStartingUsers(): ", e.toString())
         }
     }
 
